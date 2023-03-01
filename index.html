@@ -13,155 +13,168 @@ Shift+Ctrl+Re/AvPag: selecciona todo como el Ctrl+A-->
     <title>Dogs App</title>
   </head>
   <body>
-    <h1 id="titulo">DogoApp</h1>
-    <p><strong>Navegación</strong></p>
-    <ul>
-      <li><a href="#par1">Los perros aman</a></li>
-      <li><a href="#par2">Los perros odian</a></li>
-      <li><a href="#par3">Contactanos</a></li>
-      <li><a href="#end">Fin</a></li>
-    </ul>
+    <div>
+      <h1 id="titulo">DogoApp</h1>
+      <p><strong>Navegación</strong></p>
+      <ul>
+        <li><a href="#par1">Los perros aman</a></li>
+        <li><a href="#par2">Los perros odian</a></li>
+        <li><a href="#par3">Contactanos</a></li>
+        <li><a href="#end">Fin</a></li>
+      </ul>
+    </div>
     <main>
       <!-- Con hr se crea una linea horizontal -->
       <hr />
-
-      <h2>Dogs Photos:</h2>
-      <!-- todo: insert dogs images -->
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-        similique beatae voluptatibus illum eveniet minus officia rem. Ipsum
-        labore blanditiis optio pariatur. A, deleniti id cumque incidunt quam
-        voluptate nobis eius minus exercitationem suscipit sapiente molestias
-        aliquam voluptates voluptatibus aliquid? Deleniti, pariatur! Eveniet
-        nostrum iure laboriosam facere placeat optio quidem.
-      </p>
-      <a
-        href="https://estag.fimagenes.com/img/1/2/z/N/2zN_900.jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://estag.fimagenes.com/img/1/2/z/N/2zN_900.jpg"
-          alt="Is the image of two rotweiller puppy race"
-        />
-      </a>
-
-      <p>
-        Haz click
+      <div>
+        <h2>Dogs Photos:</h2>
+        <!-- todo: insert dogs images -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+          similique beatae voluptatibus illum eveniet minus officia rem. Ipsum
+          labore blanditiis optio pariatur. A, deleniti id cumque incidunt quam
+          voluptate nobis eius minus exercitationem suscipit sapiente molestias
+          aliquam voluptates voluptatibus aliquid? Deleniti, pariatur! Eveniet
+          nostrum iure laboriosam facere placeat optio quidem.
+        </p>
         <a
-          href="https://www.pexels.com/es-es/buscar/perros/"
+          href="https://estag.fimagenes.com/img/1/2/z/N/2zN_900.jpg"
           target="_blank"
           rel="noopener noreferrer"
-          >aqui</a
         >
-        para ir a ver más fotos de perros.
-      </p>
+          <img
+            src="https://estag.fimagenes.com/img/1/2/z/N/2zN_900.jpg"
+            alt="Is the image of two rotweiller puppy race"
+          />
+        </a>
+
+        <p>
+          Haz click
+          <a
+            href="https://www.pexels.com/es-es/buscar/perros/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >aqui</a
+          >
+          para ir a ver más fotos de perros.
+        </p>
+      </div>
       <!-- rel="noopener noreferrer" es un atributo que se coloca para evitar ataques informaticos cuando los enlaces se abren en una pestaña nueva-->
+    
+
+      <hr />
+
+      <div>
+        <h3 id="par1">Los perros <strong>aman</strong></h3>
+        <ul>
+          <li>Jugar</li>
+          <li>Comer</li>
+          <li>Dormir</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div>
+        <h3 id="par2">Los perros <strong>odian</strong></h3>
+        <ul>
+          <li>Bañarse</li>
+          <li>Pulgas</li>
+          <li>Fuegos artificiales</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div>
+        <h3 id="par3">Contactanos</h3>
+
+        <form>
+          <!-- Para lograr que se seleccione un solo valor en los botones de radio, se debe crear un grupo de botones de radio. Esto se consigue usando el atributo name y colocandoles a todos el mismo valor, como se muestra debajo. -->
+
+          <!-- Es importante especificar el atributo value en los boyones de radio y checkbox. Debido a que este atributo indicará el valor que se es enviado al servidor, de no especificarse se enviará un valor por defecto asignado a cada tipo de elemento. -->
+
+          <!-- *Radios -->
+          <span>Entorno</span><br>
+          <label>
+            <input 
+              type="radio" 
+              name="entorno" 
+              value="interior" 
+              required 
+              checked
+            />Interior
+          </label><br />
+          <!-- br es el salto de linea -->
+
+          <label>
+            <input 
+              type="radio" 
+              name="entorno" 
+              value="exterior"
+              required 
+            />Exterior
+          </label><br />
+          
+          <span>Procedencia</span><br>
+          <label>
+            <input 
+              type="radio" 
+              name="procedencia"
+              value="comprado"
+            />Comprado
+          </label><br>
+          <label>
+            <input 
+              type="radio" 
+              name="procedencia" 
+              value="adoptado"
+              checked
+            />Adoptado
+          </label><br>
+
+          <!-- *Checkboxes -->
+          <span>Personalidad</span><br>
+          <label>
+            <input 
+              type="checkbox" 
+              name="personalidad" 
+              value="carinoso"
+            />Cariñoso
+          </label><br />
+          <label>
+            <input 
+              type="checkbox" 
+              name="personalidad" 
+              value="obediente"
+            />Obediente
+          </label><br />
+          <label>
+            <input 
+              type="checkbox" 
+              name="personalidad" 
+              value="jugueton"
+            />Jugueton
+          </label><br />
+
+          <!-- *URL -->
+          <input
+            type="text"
+            placeholder="URL de la foto de tu gato"
+            required
+          /><br />
+
+          <!-- *Submit -->
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <h3 id="end">Fin</h3>
+
+      <a href="#titulo">Top</a>
     </main>
-
-    <hr />
-
-    <h3 id="par1">Los perros <strong>aman</strong></h3>
-    <ul>
-      <li>Jugar</li>
-      <li>Comer</li>
-      <li>Dormir</li>
-    </ul>
-
-    <hr />
-
-    <h3 id="par2">Los perros <strong>odian</strong></h3>
-    <ul>
-      <li>Bañarse</li>
-      <li>Pulgas</li>
-      <li>Fuegos artificiales</li>
-    </ul>
-
-    <hr />
-
-    <h3 id="par3">Contactanos</h3>
-
-    <form>
-      <!-- Para lograr que se seleccione un solo valor en los botones de radio, se debe crear un grupo de botones de radio. Esto se consigue usando el atributo name y colocandoles a todos el mismo valor, como se muestra debajo. -->
-
-      <!-- Es importante especificar el atributo value en los boyones de radio y checkbox. Debido a que este atributo indicará el valor que se es enviado al servidor, de no especificarse se enviará un valor por defecto asignado a cada tipo de elemento. -->
-
-      <!-- *Radios -->
-      <span>Entorno</span><br>
-      <label>
-        <input 
-          type="radio" 
-          name="entorno" 
-          value="interior" 
-          required 
-          checked
-        />Interior
-      </label><br />
-      <!-- br es el salto de linea -->
-
-      <label>
-        <input 
-          type="radio" 
-          name="entorno" 
-          value="exterior"
-          required 
-        />Exterior
-      </label><br />
-      
-      <span>Procedencia</span><br>
-      <label>
-        <input 
-          type="radio" 
-          name="procedencia"
-          value="comprado"
-        />Comprado
-      </label><br>
-      <label>
-        <input 
-          type="radio" 
-          name="procedencia" 
-          value="adoptado"
-          checked
-        />Adoptado
-      </label><br>
-
-      <!-- *Checkboxes -->
-      <span>Personalidad</span><br>
-      <label>
-        <input 
-          type="checkbox" 
-          name="personalidad" 
-          value="carinoso"
-        />Cariñoso
-      </label><br />
-      <label>
-        <input 
-          type="checkbox" 
-          name="personalidad" 
-          value="obediente"
-        />Obediente
-      </label><br />
-      <label>
-        <input 
-          type="checkbox" 
-          name="personalidad" 
-          value="jugueton"
-        />Jugueton
-      </label><br />
-
-      <!-- *URL -->
-      <input
-        type="text"
-        placeholder="URL de la foto de tu gato"
-        required
-      /><br />
-
-      <!-- *Submit -->
-      <button type="submit">Enviar</button>
-    </form>
-
-    <h3 id="end">Fin</h3>
-
-    <a href="#titulo">Top</a>
+    <footer>
+      <p><small>Derechos no Reservados - Johan Rodríguez</small></p>
+    </footer>
   </body>
 </html>
