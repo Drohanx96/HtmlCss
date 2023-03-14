@@ -22,3 +22,13 @@ div {
   background-color: aliceblue;
   text-align: center;
 }
+
+ul {
+  text-align: left;
+}
+
+a[href] {
+  text-decoration: none;
+}
+
+/* Selector de atributo */
