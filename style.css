@@ -1,5 +1,9 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  /* Las variables en css se deben declarar en el contenedor principal donde se vayan a utilizar. Por ejemplo: declarandolo de esta forma podemos usar los colores en todo el documento. */
+  --primario: lightsalmon;
+  --secundadio: lightgreen;
+  --terciario: aquamarine;
 }
 
 /* Yendo a las herramientas de desarrollador, en la seccion de computed podemos ver al final del todo la fuente que se esta mostrando */
@@ -13,14 +17,19 @@ img {
 /* border-style: none, solid, dotted, dashed, double, inset, outset, ridge, groove. Se pueden combinar mas de un estilo de borde.*/
 
 main {
-  background-color: lightsalmon;
+  /* se pueden colocar valores de respaldo para las variables, para las ocasiones en las que las variables no se consigan o tengan algun error */
+  background-color: var(--primario, red);
 }
 
 div {
   width: 75%;
   margin: 0 auto;
-  background-color: aliceblue;
+  background-color: var(--secundadio);
   text-align: center;
+}
+
+.nav {
+  background-color: var(--terciario);
 }
 
 ul {
